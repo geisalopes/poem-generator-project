@@ -1,10 +1,25 @@
 a {
-  color: #885df1;
+  color: #bc549f;
 }
 
 body {
-  background-color: #f9f7fe;
+  position: relative;
+  margin: 0;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/backgroung.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4; /* Ajuste a opacidade conforme necessário (0.0 a 1.0) */
+  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo do body */
 }
 
 header {
@@ -13,8 +28,9 @@ header {
 
 h1 {
   color: #272044;
-  font-weight: 900;
-  font-size: 36px;
+  font-family: "Cookie", cursive;
+  font-size: 58px;
+  font-weight: 500;
   line-height: 1.5;
   text-align: center;
 }
@@ -46,13 +62,17 @@ main {
 }
 
 .instructions {
-  color: #272044;
-  border: 1px solid rgb(39, 33, 66, 0.5);
+  color: #221e1d;
+  border: 1px solid rgba(165, 169, 174, 0.8);
   border-radius: 50px;
   font-size: 16px;
   line-height: 20px;
   padding: 16px;
   width: 80%;
+}
+
+.instructions:focus {
+  outline-color: #ae9c93;
 }
 
 .form-container {
@@ -69,7 +89,7 @@ main {
 
 .poem {
   background-color: #fff;
-  border-left: 3px solid #885df1;
+  border-left: 3px solid #b7b1ae;
   box-shadow: 0 20px 60px rgba(54, 50, 100, 0.03);
   font-size: 16px;
   line-height: 2;
@@ -83,7 +103,7 @@ main {
 
 .submit-button {
   color: white;
-  background-color: #885df1;
+  background-color: #a5a9ae;
   border: none;
   border-radius: 50px;
   font-size: 16px;
